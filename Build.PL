@@ -23,12 +23,12 @@ sub ACTION_install {
 SUBCLASS
 
 $class->new(
-    module_name => 'irssi-scripts',
-    dist_abstract => 'Test',
-    dist_author => 'David Olrik <david@olrik.dk>',
-    dist_version => '0.1',
-    license  => 'perl',
-    requires => {
+    module_name     => 'irssi-scripts',
+    dist_abstract   => 'Test',
+    dist_author     => 'David Olrik <david@olrik.dk>',
+    dist_version    => '0.1',
+    license         => 'perl',
+    requires        => {
         'perl'            => '5.10.1',
         'Mojolicious'     => '4.49',
         'DateTime'        => '1.03',
@@ -36,4 +36,5 @@ $class->new(
         'Unicode::String' => '2.09',
 
     },
+    create_packlist => 0,
 )->create_build_script;
