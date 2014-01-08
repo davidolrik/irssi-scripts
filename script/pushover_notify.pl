@@ -46,12 +46,13 @@ sub notify {
     return if $config{proxy_client_count};
 
     my $params = {
-        token    => Irssi::settings_get_str('pushover_notify_token'),
-        user     => Irssi::settings_get_str('pushover_notify_userkey'),
-        title    => join(' ', 'Irssi', $event),
-        message  => $text,
-        priority => $priority, # [-2..2],
+        token     => Irssi::settings_get_str('pushover_notify_token'),
+        user      => Irssi::settings_get_str('pushover_notify_userkey'),
+        title     => join(' ', 'Irssi', $event),
+        message   => $text,
+        priority  => $priority, # [-2..2],
         timestamp => time(),
+        sound     => 'pushover',
     };
     my $url = 'https://api.pushover.net/1/messages.json';
 
