@@ -22,7 +22,7 @@ $VERSION = '0.01';
 );
 
 sub cmd_pushover_notify ($$$) {
-    Irssi::print('%G>>%n Prowl notify can be configured using settings:');
+    Irssi::print('%G>>%n Pushover notify can be configured using settings:');
     Irssi::print('%G>>%n pushover_notify_token        : Your Pushover.net application token');
     Irssi::print('%G>>%n pushover_notify_userkey      : Your Pushover.net user key');
     Irssi::print('%G>>%n pushover_notify_show_privmsg : Notify about private messages.');
